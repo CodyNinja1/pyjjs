@@ -1,5 +1,5 @@
 # pyjjs
-Scraper for the Jordanian Jewelers' Syndicate's website, since there's no API for it.
+Scraper for the [Jordanian Jewelers' Syndicate's website](https://jjsjo.com/), since there's no API for it.
 
 ## Prerequistes
 `beautifulsoup4` and `requests`
