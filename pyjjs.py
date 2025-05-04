@@ -7,8 +7,11 @@ class GoldPrice:
         self.SellingPrice = SellingPrice
         self.PurchasePrice = PurchasePrice
 
-    def __repr__(self):
+    def __str__(self):
         return f"{self.Karats}K sell for {self.SellingPrice}, and are bought for {self.PurchasePrice}."
+
+    def __repr__(self):
+        return f"{{Karats: {self.Karats}, SellingPrice: {self.SellingPrice}, PurchasePrice: {self.PurchasePrice}}}"
 
 Website = "https://jjsjo.com/"
 
