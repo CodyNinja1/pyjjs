@@ -38,6 +38,3 @@ def GetGoldPrices() -> list[GoldPrice]:
         Prices.append(GoldPrice(Karats, SellingPrice, PurchasePrice))
 
     return Prices
-
-if __name__ == "__main__":
-    Main()
