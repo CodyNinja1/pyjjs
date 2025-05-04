@@ -29,7 +29,8 @@ def GetGoldPrices():
 
     for Child in PricesTableBody.children:
         # Every 2nd element (including 0) is \n, so we skip them
-        # Also, each price is separated with dots instead of commas (so seventy thousand is 70.000)
+        # The karats have " K" or " k" following them, so 24 karats is written as "24 K"
+        # Each price is separated with dots instead of commas (so seventy thousand is 70.000)
         Karats = int(list(Child.children)[1].text.split(" ")[0])
         SellingPrice = int(list(Child.children)[3].text.replace(".", ""))
         PurchasePrice = int(list(Child.children)[5].text.replace(".", ""))
