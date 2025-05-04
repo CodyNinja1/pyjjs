@@ -9,5 +9,6 @@ The only function that exists is `GetGoldPrices() -> list[GoldPrice]`, which scr
 The `GoldPrice` class only has the `Karat: int`, `SellingPrice: int`, and `PurchasePrice: int` members.\
 It can also be converted to a string like:
 ```python
-print(GetGoldPrices()[0]) # "24K sell for 76200, and are bought for 73800."
+print(GetGoldPrices()[0]) # "{Karats: 24, SellingPrice: 76200, PurchasePrice: 73800}"
+print(str(GetGoldPrices()[0])) # "24K sell for 76200, and are bought for 73800."
 ```
