@@ -18,7 +18,7 @@ def GetGoldPrices() -> list[GoldPrice]:
     WebRequest = requests.get(Website)
     if WebRequest.status_code != 200:
         print(f"Error pinging {Website}: {WebRequest.status_code}")
-        return
+        return []
     
     HtmlContent = WebRequest.text
     BS4Scraper = BeautifulSoup(HtmlContent, features="html.parser")
