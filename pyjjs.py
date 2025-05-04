@@ -12,7 +12,7 @@ class GoldPrice:
 
 Website = "https://jjsjo.com/"
 
-def GetGoldPrices():
+def GetGoldPrices() -> list[GoldPrice]:
     Prices: list[GoldPrice] = []
     
     WebRequest = requests.get(Website)
@@ -31,9 +31,9 @@ def GetGoldPrices():
         # Every 2nd element (including 0) is \n, so we skip them
         # The karats have " K" or " k" following them, so 24 karats is written as "24 K"
         # Each price is separated with dots instead of commas (so seventy thousand is 70.000)
-        Karats = int(list(Child.children)[1].text.split(" ")[0])
-        SellingPrice = int(list(Child.children)[3].text.replace(".", ""))
-        PurchasePrice = int(list(Child.children)[5].text.replace(".", ""))
+        Karats: int = int(list(Child.children)[1].text.split(" ")[0])
+        SellingPrice: int = int(list(Child.children)[3].text.replace(".", ""))
+        PurchasePrice: int = int(list(Child.children)[5].text.replace(".", ""))
 
         Prices.append(GoldPrice(Karats, SellingPrice, PurchasePrice))
 
